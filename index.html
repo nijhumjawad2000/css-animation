@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    .frontground,
+    .background {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate3d(0, 0, 0);
+    }
+
+        .background{
+            background: url('./city.png') 0 0 repeat-x;
+           
+            background-size: 700px 100%;
+            animation: backgrounds 10s linear infinite;
+        }
+        @keyframes backgrounds{
+            form{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -700px 0;
+            }
+        }
+        .frontground{
+         
+            background: url('./grass.png') 0 0 repeat-x;
+          
+            background-size: 950px 100%;
+            animation: frontground 5s linear infinite;
+            z-index: 1;
+            
+        }
+        @keyframes frontground{
+            form{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -950px 0;
+            }
+        }
+        .run{
+           position: absolute;
+            top: 100px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        background: url('./cartoon.png') 0 0 no-repeat;
+        width: 184px;
+        height: 325px;
+       
+        animation: walk 1s steps(8) infinite;
+        }
+        @keyframes walk{
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -1472px 0;
+            }
+            }
+        .sun{
+            
+            z-index: 2;
+    
+        }
+ .rabit{
+    
+    background: url('./rabit.png') 0 0 repeat;
+    position: absolute;
+    top: 49vh;
+    bottom: 0;
+    left: 13vw;
+    right: 0;
+    
+    width: 200px;
+    height: 238px;
+    animation: bird 800ms steps(8) infinite alternate;
+    /* z-index: 99; */
+    transition: top 500ms, left 500ms;
+}
+@keyframes bird{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: -1600px 0; 
+    }
+}
+.raven{
+    top: 10%;
+    bottom: 0;
+    left: 70vw;
+    right: 0;
+   background: url('./raven.png') 0 0 no-repeat;
+   position: absolute;
+   width: 207.22222px;
+   height: 208px;
+   animation: raven 2000ms steps(8) infinite;
+}
+@keyframes raven{
+   0%{background-position: 0 0;}
+   33.33%{background-position: -1657.7778px 0;}
+
+   33.34%{background-position: 0 -213px;}
+   66.66%{background-position: -1657px -213px;}
+
+   66.67%{background-position: 0 -426px;}
+   100%{background-position: -1657px -426px;}
+
+}
+
+            
+    </style>
+</head>
+<body>
+    <div class="sun">
+        <img style="max-height: 13vh;
+        margin-left: 45vw;"src="./sun.png" alt="">
+<div class="container">
+
+
+    <div class="background">
+        
+            <div class="sun">
+                    <img style="max-height: 13vh;
+                    margin-left: 45vw;"src="./sun.png" alt="">
+                    </div>
+    </div>
+    <div class="raven"></div>
+    <div class="run"></div>
+    <div class="rabit"></div>
+    <div class="frontground"></div>
+</div>
+</body>
+</html>
